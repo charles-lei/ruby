@@ -1,0 +1,2314 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/api/v1/
+
+# fuzzer
+
+Smart Fuzzer API
+
+## Jobs collection [/api/v1/jobs]
+
+### List All Jobs [GET]
+
++ Response 200 (application/json)
+
+        {
+            "jobs": [
+                {
+                    "id": 1,
+                    "job_name": "afl-test",
+                    "engine": "afl",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:13:01",
+                    "created_at": "12-14 06:11:47",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.1 hours",
+                            "total_execs": "20 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "1981 execs/sec",
+                            "fav_path": 14,
+                            "total_path": 349,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:12:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.3 hours",
+                            "total_execs": "42.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "1963 execs/sec",
+                            "fav_path": 14,
+                            "total_path": 354,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:12:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.4 hours",
+                            "total_execs": "62.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2308 execs/sec",
+                            "fav_path": 14,
+                            "total_path": 357,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:12:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.6 hours",
+                            "total_execs": "84.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "2497 execs/sec",
+                            "fav_path": 14,
+                            "total_path": 359,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:12:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.6 hours",
+                            "total_execs": "107.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2261 execs/sec",
+                            "fav_path": 14,
+                            "total_path": 365,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:12:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.6 hours",
+                            "total_execs": "129.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2446 execs/sec",
+                            "fav_path": 14,
+                            "total_path": 369,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:12:56"
+                        }
+                    ],
+                    "crash_types": {
+                        "Heap-buffer-overflow": 2,
+                        "Heap-double-free": 2
+                    },
+                    "crash_time": {
+                        "06:12": 4
+                    }
+                },
+                {
+                    "id": 2,
+                    "job_name": "libfuzzer-test",
+                    "engine": "libfuzzer",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:14:06",
+                    "created_at": "12-14 06:11:47",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.0 hours",
+                            "total_execs": "20 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2373 execs/sec",
+                            "fav_path": 48,
+                            "total_path": 2877,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:13:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.1 hours",
+                            "total_execs": "44.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2244 execs/sec",
+                            "fav_path": 49,
+                            "total_path": 2882,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:13:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.3 hours",
+                            "total_execs": "64.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "2328 execs/sec",
+                            "fav_path": 49,
+                            "total_path": 2888,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:13:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.3 hours",
+                            "total_execs": "84.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2288 execs/sec",
+                            "fav_path": 49,
+                            "total_path": 2888,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:13:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.4 hours",
+                            "total_execs": "104.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2181 execs/sec",
+                            "fav_path": 49,
+                            "total_path": 2888,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 5,
+                            "updated_at": "12-14 06:13:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.6 hours",
+                            "total_execs": "124.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "2073 execs/sec",
+                            "fav_path": 50,
+                            "total_path": 2893,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 5,
+                            "updated_at": "12-14 06:13:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "21.6 hours",
+                            "total_execs": "147.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "1918 execs/sec",
+                            "fav_path": 51,
+                            "total_path": 2894,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 5,
+                            "updated_at": "12-14 06:14:06"
+                        }
+                    ],
+                    "crash_types": {
+                        "Heap-buffer-overflow": 2,
+                        "Heap-double-free": 3
+                    },
+                    "crash_time": {
+                        "06:13": 5
+                    }
+                },
+                {
+                    "id": 3,
+                    "job_name": "afl-python-test",
+                    "engine": "afl-python",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:15:11",
+                    "created_at": "12-14 06:11:47",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.2 hours",
+                            "total_execs": "22 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "1957 execs/sec",
+                            "fav_path": 35,
+                            "total_path": 752,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:14:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.2 hours",
+                            "total_execs": "42.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2356 execs/sec",
+                            "fav_path": 35,
+                            "total_path": 759,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:14:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.4 hours",
+                            "total_execs": "65.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "2452 execs/sec",
+                            "fav_path": 35,
+                            "total_path": 768,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:14:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.4 hours",
+                            "total_execs": "89.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2131 execs/sec",
+                            "fav_path": 36,
+                            "total_path": 775,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:14:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.5 hours",
+                            "total_execs": "108.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "2321 execs/sec",
+                            "fav_path": 36,
+                            "total_path": 779,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:14:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.6 hours",
+                            "total_execs": "127.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "1951 execs/sec",
+                            "fav_path": 36,
+                            "total_path": 786,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:15:06"
+                        }
+                    ],
+                    "crash_types": {
+                        "OTHERS": 3
+                    },
+                    "crash_time": {
+                        "06:15": 1,
+                        "06:14": 2
+                    }
+                },
+                {
+                    "id": 4,
+                    "job_name": "afl-rust-test",
+                    "engine": "afl-rust",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:16:16",
+                    "created_at": "12-14 06:11:47",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.1 hours",
+                            "total_execs": "20 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2079 execs/sec",
+                            "fav_path": 21,
+                            "total_path": 778,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:15:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.3 hours",
+                            "total_execs": "39.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2192 execs/sec",
+                            "fav_path": 22,
+                            "total_path": 782,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:15:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.4 hours",
+                            "total_execs": "61.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "2378 execs/sec",
+                            "fav_path": 22,
+                            "total_path": 789,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:15:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.4 hours",
+                            "total_execs": "81.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2330 execs/sec",
+                            "fav_path": 23,
+                            "total_path": 795,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:15:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.4 hours",
+                            "total_execs": "103.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2467 execs/sec",
+                            "fav_path": 24,
+                            "total_path": 796,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:15:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.5 hours",
+                            "total_execs": "127.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2273 execs/sec",
+                            "fav_path": 25,
+                            "total_path": 802,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:16:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "21.6 hours",
+                            "total_execs": "149.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "1963 execs/sec",
+                            "fav_path": 26,
+                            "total_path": 808,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:16:16"
+                        }
+                    ],
+                    "crash_types": {
+                        "Heap-buffer-overflow": 1,
+                        "Heap-double-free": 3
+                    },
+                    "crash_time": {
+                        "06:16": 1,
+                        "06:15": 3
+                    }
+                },
+                {
+                    "id": 5,
+                    "job_name": "afl-sharp-test",
+                    "engine": "afl-sharp",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:17:21",
+                    "created_at": "12-14 06:11:47",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.0 hours",
+                            "total_execs": "23 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2071 execs/sec",
+                            "fav_path": 16,
+                            "total_path": 193,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:16:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.2 hours",
+                            "total_execs": "42.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2254 execs/sec",
+                            "fav_path": 16,
+                            "total_path": 197,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:16:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.4 hours",
+                            "total_execs": "64.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2159 execs/sec",
+                            "fav_path": 17,
+                            "total_path": 205,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:16:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.6 hours",
+                            "total_execs": "87.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2482 execs/sec",
+                            "fav_path": 17,
+                            "total_path": 214,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:16:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.6 hours",
+                            "total_execs": "107.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2115 execs/sec",
+                            "fav_path": 18,
+                            "total_path": 215,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:17:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.8 hours",
+                            "total_execs": "126.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "1933 execs/sec",
+                            "fav_path": 18,
+                            "total_path": 215,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:17:16"
+                        }
+                    ],
+                    "crash_types": {
+                        "OTHERS": 4
+                    },
+                    "crash_time": {
+                        "06:17": 2,
+                        "06:16": 2
+                    }
+                },
+                {
+                    "id": 6,
+                    "job_name": "afl-java-test",
+                    "engine": "afl-java",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:18:26",
+                    "created_at": "12-14 06:11:47",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.2 hours",
+                            "total_execs": "20 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "1921 execs/sec",
+                            "fav_path": 107,
+                            "total_path": 1135,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:17:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.2 hours",
+                            "total_execs": "41.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2385 execs/sec",
+                            "fav_path": 107,
+                            "total_path": 1140,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:17:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.4 hours",
+                            "total_execs": "64.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2207 execs/sec",
+                            "fav_path": 107,
+                            "total_path": 1147,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:17:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.4 hours",
+                            "total_execs": "83.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "2420 execs/sec",
+                            "fav_path": 107,
+                            "total_path": 1155,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:17:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.6 hours",
+                            "total_execs": "107.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "2114 execs/sec",
+                            "fav_path": 108,
+                            "total_path": 1162,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:18:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.7 hours",
+                            "total_execs": "128.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2066 execs/sec",
+                            "fav_path": 108,
+                            "total_path": 1165,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:18:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "21.7 hours",
+                            "total_execs": "150.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2320 execs/sec",
+                            "fav_path": 108,
+                            "total_path": 1167,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:18:26"
+                        }
+                    ],
+                    "crash_types": {
+                        "OTHERS": 4
+                    },
+                    "crash_time": {
+                        "06:18": 2,
+                        "06:17": 2
+                    }
+                },
+                {
+                    "id": 7,
+                    "job_name": "afl-go-test",
+                    "engine": "afl-go",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:19:31",
+                    "created_at": "12-14 06:11:48",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.1 hours",
+                            "total_execs": "19 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2139 execs/sec",
+                            "fav_path": 107,
+                            "total_path": 820,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:18:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.2 hours",
+                            "total_execs": "39.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "2190 execs/sec",
+                            "fav_path": 107,
+                            "total_path": 820,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:18:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.4 hours",
+                            "total_execs": "58.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2406 execs/sec",
+                            "fav_path": 107,
+                            "total_path": 820,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:18:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.6 hours",
+                            "total_execs": "81.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2343 execs/sec",
+                            "fav_path": 108,
+                            "total_path": 826,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:19:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.8 hours",
+                            "total_execs": "103.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "1978 execs/sec",
+                            "fav_path": 108,
+                            "total_path": 828,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:19:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.8 hours",
+                            "total_execs": "127.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2147 execs/sec",
+                            "fav_path": 108,
+                            "total_path": 831,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:19:26"
+                        }
+                    ],
+                    "crash_types": {
+                        "OTHERS": 4
+                    },
+                    "crash_time": {
+                        "06:19": 2,
+                        "06:18": 2
+                    }
+                },
+                {
+                    "id": 8,
+                    "job_name": "afl-javascript-test",
+                    "engine": "afl-javascript",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:20:36",
+                    "created_at": "12-14 06:11:48",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.0 hours",
+                            "total_execs": "21 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "1950 execs/sec",
+                            "fav_path": 24,
+                            "total_path": 173,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:19:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.2 hours",
+                            "total_execs": "42.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2158 execs/sec",
+                            "fav_path": 25,
+                            "total_path": 181,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:19:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.3 hours",
+                            "total_execs": "62.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2257 execs/sec",
+                            "fav_path": 25,
+                            "total_path": 186,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:19:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.5 hours",
+                            "total_execs": "83.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2483 execs/sec",
+                            "fav_path": 25,
+                            "total_path": 194,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:20:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.7 hours",
+                            "total_execs": "103.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "2366 execs/sec",
+                            "fav_path": 25,
+                            "total_path": 197,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:20:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.7 hours",
+                            "total_execs": "123.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2297 execs/sec",
+                            "fav_path": 26,
+                            "total_path": 198,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 5,
+                            "updated_at": "12-14 06:20:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "21.8 hours",
+                            "total_execs": "146.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2138 execs/sec",
+                            "fav_path": 26,
+                            "total_path": 200,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 6,
+                            "updated_at": "12-14 06:20:36"
+                        }
+                    ],
+                    "crash_types": {
+                        "OTHERS": 6
+                    },
+                    "crash_time": {
+                        "06:20": 4,
+                        "06:19": 2
+                    }
+                },
+                {
+                    "id": 9,
+                    "job_name": "kleefl-test",
+                    "engine": "kleefl",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:21:41",
+                    "created_at": "12-14 06:11:48",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.0 hours",
+                            "total_execs": "24 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2436 execs/sec",
+                            "fav_path": 109,
+                            "total_path": 1314,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:20:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.0 hours",
+                            "total_execs": "47.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "2448 execs/sec",
+                            "fav_path": 109,
+                            "total_path": 1321,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:20:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.0 hours",
+                            "total_execs": "70.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2276 execs/sec",
+                            "fav_path": 109,
+                            "total_path": 1321,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:21:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.2 hours",
+                            "total_execs": "91.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "1975 execs/sec",
+                            "fav_path": 109,
+                            "total_path": 1329,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:21:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.3 hours",
+                            "total_execs": "110.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2001 execs/sec",
+                            "fav_path": 110,
+                            "total_path": 1330,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:21:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.4 hours",
+                            "total_execs": "133.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "2102 execs/sec",
+                            "fav_path": 110,
+                            "total_path": 1338,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:21:36"
+                        }
+                    ],
+                    "crash_types": {
+                        "OTHERS": 2
+                    },
+                    "crash_time": {
+                        "06:21": 2
+                    }
+                },
+                {
+                    "id": 10,
+                    "job_name": "aflnet-test",
+                    "engine": "aflnet",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:22:46",
+                    "created_at": "12-14 06:11:48",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.1 hours",
+                            "total_execs": "23 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2198 execs/sec",
+                            "fav_path": 6,
+                            "total_path": 337,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:21:46"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.3 hours",
+                            "total_execs": "47.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2187 execs/sec",
+                            "fav_path": 6,
+                            "total_path": 337,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:21:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.4 hours",
+                            "total_execs": "68.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "2415 execs/sec",
+                            "fav_path": 6,
+                            "total_path": 342,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:22:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.6 hours",
+                            "total_execs": "91.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2472 execs/sec",
+                            "fav_path": 7,
+                            "total_path": 349,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:22:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.7 hours",
+                            "total_execs": "113.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2475 execs/sec",
+                            "fav_path": 8,
+                            "total_path": 357,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:22:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.7 hours",
+                            "total_execs": "134.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "2204 execs/sec",
+                            "fav_path": 8,
+                            "total_path": 364,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:22:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "21.9 hours",
+                            "total_execs": "154.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2159 execs/sec",
+                            "fav_path": 9,
+                            "total_path": 373,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:22:46"
+                        }
+                    ],
+                    "crash_types": {
+                        "OTHERS": 4
+                    },
+                    "crash_time": {
+                        "06:22": 3,
+                        "06:21": 1
+                    }
+                },
+                {
+                    "id": 11,
+                    "job_name": "aflgo-test",
+                    "engine": "aflgo",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:23:51",
+                    "created_at": "12-14 06:11:48",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.0 hours",
+                            "total_execs": "20 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2321 execs/sec",
+                            "fav_path": 110,
+                            "total_path": 1899,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:22:56"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.0 hours",
+                            "total_execs": "39.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "2325 execs/sec",
+                            "fav_path": 111,
+                            "total_path": 1900,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 0,
+                            "updated_at": "12-14 06:23:06"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.1 hours",
+                            "total_execs": "58.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "1948 execs/sec",
+                            "fav_path": 111,
+                            "total_path": 1900,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:23:16"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.2 hours",
+                            "total_execs": "80.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2144 execs/sec",
+                            "fav_path": 111,
+                            "total_path": 1908,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:23:26"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.3 hours",
+                            "total_execs": "99.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "2452 execs/sec",
+                            "fav_path": 111,
+                            "total_path": 1909,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:23:36"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.4 hours",
+                            "total_execs": "119.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2327 execs/sec",
+                            "fav_path": 111,
+                            "total_path": 1916,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:23:46"
+                        }
+                    ],
+                    "crash_types": {
+                        "OTHERS": 3
+                    },
+                    "crash_time": {
+                        "06:23": 3
+                    }
+                },
+                {
+                    "id": 12,
+                    "job_name": "afl_test3",
+                    "engine": "afl",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:28:01",
+                    "created_at": "12-14 06:26:56",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.1 hours",
+                            "total_execs": "23 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2082 execs/sec",
+                            "fav_path": 100,
+                            "total_path": 811,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:27:00"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.1 hours",
+                            "total_execs": "43.0 millions",
+                            "cumulative_speed": "2.3 millions execs/sec",
+                            "average_speed": "2448 execs/sec",
+                            "fav_path": 100,
+                            "total_path": 811,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:27:10"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.1 hours",
+                            "total_execs": "62.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2290 execs/sec",
+                            "fav_path": 100,
+                            "total_path": 811,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:27:21"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.3 hours",
+                            "total_execs": "81.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2095 execs/sec",
+                            "fav_path": 101,
+                            "total_path": 816,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:27:31"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.5 hours",
+                            "total_execs": "101.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "2337 execs/sec",
+                            "fav_path": 102,
+                            "total_path": 825,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:27:40"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.7 hours",
+                            "total_execs": "124.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "1935 execs/sec",
+                            "fav_path": 103,
+                            "total_path": 833,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:27:51"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "21.9 hours",
+                            "total_execs": "146.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2313 execs/sec",
+                            "fav_path": 104,
+                            "total_path": 834,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:28:01"
+                        }
+                    ],
+                    "crash_types": {
+                        "Heap-buffer-overflow": 2,
+                        "Heap-double-free": 1
+                    },
+                    "crash_time": {
+                        "06:27": 3
+                    }
+                },
+                {
+                    "id": 13,
+                    "job_name": "afl_test4",
+                    "engine": "afl",
+                    "status": "done",
+                    "is_minimize_testcase": false,
+                    "is_symbolic": false,
+                    "is_blackbox": false,
+                    "is_net_protocol": false,
+                    "protocol": null,
+                    "protocol_address": null,
+                    "finished_at": "12-14 06:30:11",
+                    "created_at": "12-14 06:29:05",
+                    "statistic": [
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "3.0 hours",
+                            "total_execs": "22 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "1909 execs/sec",
+                            "fav_path": 131,
+                            "total_path": 1741,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:29:10"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "6.0 hours",
+                            "total_execs": "44.0 millions",
+                            "cumulative_speed": "2.2 millions execs/sec",
+                            "average_speed": "1905 execs/sec",
+                            "fav_path": 131,
+                            "total_path": 1745,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:29:20"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "9.0 hours",
+                            "total_execs": "64.0 millions",
+                            "cumulative_speed": "2.0 millions execs/sec",
+                            "average_speed": "1997 execs/sec",
+                            "fav_path": 131,
+                            "total_path": 1745,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 1,
+                            "updated_at": "12-14 06:29:31"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "12.1 hours",
+                            "total_execs": "88.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "1909 execs/sec",
+                            "fav_path": 131,
+                            "total_path": 1753,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 2,
+                            "updated_at": "12-14 06:29:40"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "15.2 hours",
+                            "total_execs": "112.0 millions",
+                            "cumulative_speed": "2.4 millions execs/sec",
+                            "average_speed": "2297 execs/sec",
+                            "fav_path": 131,
+                            "total_path": 1757,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 3,
+                            "updated_at": "12-14 06:29:50"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "18.3 hours",
+                            "total_execs": "133.0 millions",
+                            "cumulative_speed": "1.9 millions execs/sec",
+                            "average_speed": "2072 execs/sec",
+                            "fav_path": 132,
+                            "total_path": 1762,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:30:01"
+                        },
+                        {
+                            "fuzzer_alive": 1200,
+                            "total_run_time": "21.4 hours",
+                            "total_execs": "153.0 millions",
+                            "cumulative_speed": "2.1 millions execs/sec",
+                            "average_speed": "2126 execs/sec",
+                            "fav_path": 132,
+                            "total_path": 1766,
+                            "pending_per_fuzzer": null,
+                            "crashes_found": 4,
+                            "updated_at": "12-14 06:30:11"
+                        }
+                    ],
+                    "crash_types": {
+                        "Heap-buffer-overflow": 3,
+                        "Heap-double-free": 1
+                    },
+                    "crash_time": {
+                        "06:30": 1,
+                        "06:29": 3
+                    }
+                }
+            ]
+        }
+
+
+### Create a New Job [POST]
+
++ Request (multipart/form-data;boundary=------FormBoundaryShouldDifferAtRuntime)
+
+    + Body
+
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[fuzzer]"; filename="openssl-fuzzer-build.zip"
+            Content-Type: application/zip
+
+            [message-part-body; type: "application/zip", size: 4754261 bytes]
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[job_name]"
+
+            afl_test
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[engine]"
+
+            afl
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[is_self_defined_path]"
+
+            true
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[testcase]"; filename="openssl-fuzzer-build.zip"
+            Content-Type: application/zip
+
+            [message-part-body; type: "application/zip", size: 4754261 bytes]
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[is_net_protocol]"
+
+            true
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[protocol]"
+
+            tcp
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[protocol_address]"
+
+            192.168.1.1
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[is_minimize_testcase]"
+
+            true
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[is_symbolic]"
+
+            true
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="job[is_blackbox]"
+
+            true
+            ------FormBoundaryShouldDifferAtRuntime--
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "id": 13,
+                "job_name": "afl_test4",
+                "engine": "afl",
+                "status": "pending",
+                "is_minimize_testcase": false,
+                "is_symbolic": false,
+                "is_blackbox": false,
+                "is_net_protocol": false,
+                "protocol": null,
+                "protocol_address": null,
+                "finished_at": null,
+                "created_at": "12-14 06:29:05",
+                "statistic": [
+                ],
+                "crash_types": {
+                },
+                "crash_time": {
+                }
+            }
+
+
+### Get a Job [GET /api/v1/jobs/{id}]
+
+You can get details about a job.
+
++ Parameters
+
+    + id (number) - The job's id
+
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "job_name": "afl-test",
+            "engine": "afl",
+            "status": "done",
+            "is_minimize_testcase": false,
+            "is_symbolic": false,
+            "is_blackbox": false,
+            "is_net_protocol": false,
+            "protocol": null,
+            "protocol_address": null,
+            "finished_at": "12-14 06:13:01",
+            "created_at": "12-14 06:11:47",
+            "statistic": [
+                {
+                    "fuzzer_alive": 1200,
+                    "total_run_time": "3.1 hours",
+                    "total_execs": "20 millions",
+                    "cumulative_speed": "2.4 millions execs/sec",
+                    "average_speed": "1981 execs/sec",
+                    "fav_path": 14,
+                    "total_path": 349,
+                    "pending_per_fuzzer": null,
+                    "crashes_found": 0,
+                    "updated_at": "12-14 06:12:06"
+                },
+                {
+                    "fuzzer_alive": 1200,
+                    "total_run_time": "6.3 hours",
+                    "total_execs": "42.0 millions",
+                    "cumulative_speed": "1.9 millions execs/sec",
+                    "average_speed": "1963 execs/sec",
+                    "fav_path": 14,
+                    "total_path": 354,
+                    "pending_per_fuzzer": null,
+                    "crashes_found": 1,
+                    "updated_at": "12-14 06:12:16"
+                },
+                {
+                    "fuzzer_alive": 1200,
+                    "total_run_time": "9.4 hours",
+                    "total_execs": "62.0 millions",
+                    "cumulative_speed": "2.4 millions execs/sec",
+                    "average_speed": "2308 execs/sec",
+                    "fav_path": 14,
+                    "total_path": 357,
+                    "pending_per_fuzzer": null,
+                    "crashes_found": 2,
+                    "updated_at": "12-14 06:12:26"
+                },
+                {
+                    "fuzzer_alive": 1200,
+                    "total_run_time": "12.6 hours",
+                    "total_execs": "84.0 millions",
+                    "cumulative_speed": "2.3 millions execs/sec",
+                    "average_speed": "2497 execs/sec",
+                    "fav_path": 14,
+                    "total_path": 359,
+                    "pending_per_fuzzer": null,
+                    "crashes_found": 3,
+                    "updated_at": "12-14 06:12:36"
+                },
+                {
+                    "fuzzer_alive": 1200,
+                    "total_run_time": "15.6 hours",
+                    "total_execs": "107.0 millions",
+                    "cumulative_speed": "2.1 millions execs/sec",
+                    "average_speed": "2261 execs/sec",
+                    "fav_path": 14,
+                    "total_path": 365,
+                    "pending_per_fuzzer": null,
+                    "crashes_found": 4,
+                    "updated_at": "12-14 06:12:46"
+                },
+                {
+                    "fuzzer_alive": 1200,
+                    "total_run_time": "18.6 hours",
+                    "total_execs": "129.0 millions",
+                    "cumulative_speed": "1.9 millions execs/sec",
+                    "average_speed": "2446 execs/sec",
+                    "fav_path": 14,
+                    "total_path": 369,
+                    "pending_per_fuzzer": null,
+                    "crashes_found": 4,
+                    "updated_at": "12-14 06:12:56"
+                }
+            ],
+            "crash_types": {
+                "Heap-buffer-overflow": 2,
+                "Heap-double-free": 2
+            },
+            "crash_time": {
+                "06:12": 4
+            }
+        }
+
+
+### Clear a Job Statistic [DELETE /api/v1/jobs/{id}/clear]
+
+You can clear a job statistic.
+
++ Parameters
+
+    + id (number) - The job's id
+
++ Response 200 (application/json)
+
+        {
+            "id": 2,
+            "job_name": "afl_test2",
+            "engine": "afl",
+            "status": "done",
+            "is_minimize_testcase": false,
+            "is_symbolic": false,
+            "is_blackbox": false,
+            "is_net_protocol": false,
+            "protocol": null,
+            "protocol_address": null,
+            "finished_at": null,
+            "created_at": "12-14 03:18:10",
+            "statistic": [
+            ],
+            "crash_types": {
+                "Heap-buffer-overflow": 3,
+                "Heap-double-free": 1
+            },
+            "crash_time": {
+                "03:19": 1,
+                "03:18": 3
+            },
+            "crashes": [
+                {
+                    "id": 16,
+                    "crash_type": "Heap-double-free",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d0b7f9c20859a9e6f5813ed894d63fbbc96777a3/Heap-double-free.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d45d7995790d0edc4d8b258eb3db13920f391f3b/demo.testcase",
+                    "created_at": "12-14 03:18:22"
+                },
+                {
+                    "id": 17,
+                    "crash_type": "Heap-buffer-overflow",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76e6ebcfbb1a62400baecba087a473e01059b276/Heap-buffer-overflow.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b53f77bef57a6b348bbc351900e17b8859f751f6/demo.testcase",
+                    "created_at": "12-14 03:18:42"
+                },
+                {
+                    "id": 18,
+                    "crash_type": "Heap-buffer-overflow",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0681771871f39bbf29c4d8ddfd8e995ffcb81ca8/Heap-buffer-overflow.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--90b208b8f14234bf941a687dd0cdecb280a71bf7/demo.testcase",
+                    "created_at": "12-14 03:18:52"
+                },
+                {
+                    "id": 19,
+                    "crash_type": "Heap-buffer-overflow",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9b95f4f98da5b57e05eebf8c4d22d1b343b59db8/Heap-buffer-overflow.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6f843bd689c3d79e78ae75f418ba8de182fee1ca/demo.testcase",
+                    "created_at": "12-14 03:19:12"
+                }
+            ]
+        }
+
+
+## Engines collection [/api/v1/engines]
+
+### List All Engines [GET]
+
++ Response 200 (application/json)
+
+        {
+            "engines": [
+                {
+                    "id": 1,
+                    "name": "afl",
+                    "status": "12-14 05:00:14 \r\n run task afl_test2",
+                    "script": "internal",
+                    "updated_at": "12-14 05:00:14"
+                },
+                {
+                    "id": 2,
+                    "name": "libfuzzer",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                },
+                {
+                    "id": 3,
+                    "name": "afl-python",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                },
+                {
+                    "id": 4,
+                    "name": "afl-rust",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                },
+                {
+                    "id": 5,
+                    "name": "afl-sharp",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                },
+                {
+                    "id": 6,
+                    "name": "afl-java",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                },
+                {
+                    "id": 7,
+                    "name": "afl-go",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                },
+                {
+                    "id": 8,
+                    "name": "afl-javascript",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                },
+                {
+                    "id": 9,
+                    "name": "kleefl",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                },
+                {
+                    "id": 10,
+                    "name": "aflnet",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                },
+                {
+                    "id": 11,
+                    "name": "aflgo",
+                    "status": "not run yet",
+                    "script": "internal",
+                    "updated_at": "12-14 04:59:14"
+                }
+            ]
+        }
+
+
+
+## Protocols collection [/api/v1/protocols]
+
+### List All Protocols [GET]
+
++ Response 200 (application/json)
+
+        {
+            "protocols": [
+                {
+                    "id": 1,
+                    "name": "UDP"
+                },
+                {
+                    "id": 2,
+                    "name": "TCP"
+                },
+                {
+                    "id": 3,
+                    "name": "IP"
+                },
+                {
+                    "id": 4,
+                    "name": "HTTP"
+                },
+                {
+                    "id": 5,
+                    "name": "SNMP"
+                },
+                {
+                    "id": 6,
+                    "name": "SSL"
+                },
+                {
+                    "id": 7,
+                    "name": "IPSecRTSP"
+                },
+                {
+                    "id": 8,
+                    "name": "FTP"
+                },
+                {
+                    "id": 9,
+                    "name": "DTLS12"
+                },
+                {
+                    "id": 10,
+                    "name": "DNS"
+                },
+                {
+                    "id": 11,
+                    "name": "DICOM"
+                },
+                {
+                    "id": 12,
+                    "name": "SMTP"
+                },
+                {
+                    "id": 13,
+                    "name": "SSH"
+                },
+                {
+                    "id": 14,
+                    "name": "TLS"
+                }
+            ]
+        }
+
+## Crashes collection [/api/v1/jobs/:job_id/crashes{?page,limit}]
+
+### List job crahses [GET]
+
+You can get all crashes of a job
+
++ Parameters
+
+    + page (number) - The page you want to turn to
+    + limit (optional,number) - The items count you want in every page; 50 by default.
+
++ Response 200 (application/json)
+
+        {
+            "crashes": [
+                {
+                    "id": 1,
+                    "crash_type": "Heap-buffer-overflow",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--09bd86e6a52916948767a0f6d30081706ff5afaf/Heap-buffer-overflow.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--af1f42aa7da9f78e09519a52e55240aa683cdbbd/demo.testcase",
+                    "created_at": "12-15 01:59:32"
+                },
+                {
+                    "id": 2,
+                    "crash_type": "Heap-double-free",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f4d2d67edb8032aa78b368aade53e210afd1a92f/Heap-double-free.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--957d888ae34792ab6d3c3dabcd94245be87a1002/demo.testcase",
+                    "created_at": "12-15 02:00:02"
+                },
+                {
+                    "id": 3,
+                    "crash_type": "Heap-buffer-overflow",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--86e6434c1b987617ba01a85f79b1d6972f1e4ff1/Heap-buffer-overflow.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0a14b3d52e7221a565dac2d9ea08418bf5147322/demo.testcase",
+                    "created_at": "12-15 02:00:12"
+                },
+                {
+                    "id": 4,
+                    "crash_type": "Heap-double-free",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f5d7aec719a98d4685e1fb13f0ad13c3d4a89876/Heap-double-free.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4c67e1a02dacea2551bd94842a0a7aa6d528a172/demo.testcase",
+                    "created_at": "12-15 02:00:22"
+                },
+                {
+                    "id": 5,
+                    "crash_type": "Heap-buffer-overflow",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ac684285ad014f55e42e87770e4a435c020a7643/Heap-buffer-overflow.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--aa96eae2a6fe7ddedfc5266917e627782c0ebf4e/demo.testcase",
+                    "created_at": "12-15 02:00:52"
+                },
+                {
+                    "id": 6,
+                    "crash_type": "Heap-buffer-overflow",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5a3adab2312bb72825d88b6ca25217c6eb3fb759/Heap-buffer-overflow.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d56086067b9c7e3ecfe3502e02352a2876e06726/demo.testcase",
+                    "created_at": "12-15 02:01:22"
+                },
+                {
+                    "id": 7,
+                    "crash_type": "Heap-double-free",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6269484116d6e49f2184528e57d0fb7c102cf8d8/Heap-double-free.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b400d77389f420c8a4b155b1dcd8866c2dc0ab4d/demo.testcase",
+                    "created_at": "12-15 02:01:42"
+                },
+                {
+                    "id": 8,
+                    "crash_type": "Heap-buffer-overflow",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bda1118fd36e0be45065119665aa1728fcfc103c/Heap-buffer-overflow.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3832f867b91f60b757c637f87775ac025d852eda/demo.testcase",
+                    "created_at": "12-15 02:02:12"
+                },
+                {
+                    "id": 9,
+                    "crash_type": "Heap-buffer-overflow",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--05f151cffe31b7bd127875356bdd12a75453396f/Heap-buffer-overflow.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1b1a8980817814feb13a9b8b4e488ec47e4cb49/demo.testcase",
+                    "created_at": "12-15 02:02:22"
+                },
+                {
+                    "id": 10,
+                    "crash_type": "Heap-double-free",
+                    "logs": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dd39d7d20c4533fc120f6de5c4d1827d4a613420/Heap-double-free.log",
+                    "test_case": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9de29f861e75e3dd153bfa8f18751c17773dde94/demo.testcase",
+                    "created_at": "12-15 02:02:32"
+                }
+            ],
+            "meta": {
+                "total_count": 27
+            }
+        }
+
+## Bots collection [/api/v1/bots{?page,limit}]
+
+### List All Bots [GET]
+
+
++ Parameters
+
+    + page (number) - The page you want to turn to
+    + limit (optional,number) - The items count you want in every page; 50 by default.
+
++ Response 200 (application/json)
+
+        {
+            "bots": [
+                {
+                    "id": 1,
+                    "name": "Bot0",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 2,
+                    "name": "Bot1",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 3,
+                    "name": "Bot2",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 4,
+                    "name": "Bot3",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 5,
+                    "name": "Bot4",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 6,
+                    "name": "Bot5",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 7,
+                    "name": "Bot6",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 8,
+                    "name": "Bot7",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 9,
+                    "name": "Bot8",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 10,
+                    "name": "Bot9",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 11,
+                    "name": "Bot10",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 12,
+                    "name": "Bot11",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 13,
+                    "name": "Bot12",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 14,
+                    "name": "Bot13",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 15,
+                    "name": "Bot14",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 16,
+                    "name": "Bot15",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 17,
+                    "name": "Bot16",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 18,
+                    "name": "Bot17",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 19,
+                    "name": "Bot18",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 20,
+                    "name": "Bot19",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 21,
+                    "name": "Bot20",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 22,
+                    "name": "Bot21",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 23,
+                    "name": "Bot22",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 24,
+                    "name": "Bot23",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 25,
+                    "name": "Bot24",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 26,
+                    "name": "Bot25",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 27,
+                    "name": "Bot26",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 28,
+                    "name": "Bot27",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 29,
+                    "name": "Bot28",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 30,
+                    "name": "Bot29",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 31,
+                    "name": "Bot30",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 32,
+                    "name": "Bot31",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 33,
+                    "name": "Bot32",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 34,
+                    "name": "Bot33",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 35,
+                    "name": "Bot34",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 36,
+                    "name": "Bot35",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 37,
+                    "name": "Bot36",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 38,
+                    "name": "Bot37",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 39,
+                    "name": "Bot38",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 40,
+                    "name": "Bot39",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 41,
+                    "name": "Bot40",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 42,
+                    "name": "Bot41",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 43,
+                    "name": "Bot42",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 44,
+                    "name": "Bot43",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 45,
+                    "name": "Bot44",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 46,
+                    "name": "Bot45",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 47,
+                    "name": "Bot46",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 48,
+                    "name": "Bot47",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 49,
+                    "name": "Bot48",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                },
+                {
+                    "id": 50,
+                    "name": "Bot49",
+                    "status": "12-15 02:21:24 \r\n run task afl-python-test",
+                    "updated_at": "2020-12-15 01:59:07"
+                }
+            ],
+            "meta": {
+                "total_count": 1200
+            }
+        }
+
+
+
+## Statistic collection [/api/v1/jobs/:job_id/statistic]
+
+### List Latest 10 job Statistics [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "fuzzer_alive": 1200,
+                "total_run_time": "3.2 hours",
+                "total_execs": "20 millions",
+                "cumulative_speed": "2.0 millions execs/sec",
+                "average_speed": "2383 execs/sec",
+                "fav_path": 102,
+                "total_path": 2848,
+                "pending_per_fuzzer": null,
+                "crashes_found": 4,
+                "updated_at": "12-13 19:06:04"
+            },
+            {
+                "fuzzer_alive": 1200,
+                "total_run_time": "6.4 hours",
+                "total_execs": "41.0 millions",
+                "cumulative_speed": "2.4 millions execs/sec",
+                "average_speed": "2382 execs/sec",
+                "fav_path": 103,
+                "total_path": 2854,
+                "pending_per_fuzzer": null,
+                "crashes_found": 7,
+                "updated_at": "12-13 19:06:14"
+            },
+            {
+                "fuzzer_alive": 1200,
+                "total_run_time": "9.4 hours",
+                "total_execs": "64.0 millions",
+                "cumulative_speed": "2.0 millions execs/sec",
+                "average_speed": "2057 execs/sec",
+                "fav_path": 103,
+                "total_path": 2857,
+                "pending_per_fuzzer": null,
+                "crashes_found": 11,
+                "updated_at": "12-13 19:06:24"
+            },
+            {
+                "fuzzer_alive": 1200,
+                "total_run_time": "12.6 hours",
+                "total_execs": "86.0 millions",
+                "cumulative_speed": "2.0 millions execs/sec",
+                "average_speed": "1961 execs/sec",
+                "fav_path": 104,
+                "total_path": 2859,
+                "pending_per_fuzzer": null,
+                "crashes_found": 12,
+                "updated_at": "12-13 19:06:34"
+            },
+            {
+                "fuzzer_alive": 1200,
+                "total_run_time": "15.799999999999999 hours",
+                "total_execs": "107.0 millions",
+                "cumulative_speed": "2.0 millions execs/sec",
+                "average_speed": "2232 execs/sec",
+                "fav_path": 104,
+                "total_path": 2867,
+                "pending_per_fuzzer": null,
+                "crashes_found": 14,
+                "updated_at": "12-13 19:06:44"
+            }
+        ]
+## BinFinder collection [/api/v1/bin_finders]
+
+### List All Bin Finders [GET]
+
++ Response 200 (application/json)
+
+        {
+            "bin_finders": [
+                {
+                    "id": 1,
+                    "name": "test4",
+                    "status": "running",
+                    "good_commit": "v1",
+                    "bad_commit": "v3",
+                    "poc": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ2dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--790ea422a9874d20c764b262f7cf5a78f27a3d9c/Heap-buffer-overflow.log",
+                    "git_repo": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ2NCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--daa10912d3dc4a42acaa23d808840fe0479dced3/libtiff.zip",
+                    "command": "./tools/tiffset",
+                    "params": null,
+                    "result": "addab4c8aa74a18c566079d10b05118acc782a6a",
+                    "log": "[*] Initializing...\n</br> +  Commit range: 'd7db70c9'(bad) to 'ad7821c'(good)\n</br> +  PoC input: POC\n</br> +  PoC command: ./tools/tiffset @@\n</br>[*] Generating most recent ASAN dump...\n</br>[*] Testing commit 'd7db70c9'...                   \n</br> +  Bug type: heap-buffer-overflow\n</br> +  Crash function: TIFFWriteDirectoryTagSampleformatArray\n</br>[*] Verifying good commit...\n</br>[*] Testing commit 'ad7821c4'... Good              \n</br>[*] Bisecting...\n</br>[*] Testing commit 'd9eded9d'... (753 remaining) Skipped           \n</br>[*] Testing commit '70aaa84a'... (753 remaining) Good              \n</br>[*] Testing commit 'da49b1d2'... (376 remaining) Bad               \n</br>[*] Testing commit 'c89c8c07'... (188 remaining) Good              \n</br>[*] Testing commit '20499fa9'... (94 remaining) Bad               \n</br>[*] Testing commit '959042fd'... (47 remaining) Bad               \n</br>[*] Testing commit '202ed69f'... (24 remaining) Bad               \n</br>[*] Testing commit 'bc3bc992'... (12 remaining) Bad               \n</br>[*] Testing commit '1b73b3d8'... (6 remaining) Bad               \n</br>[*] Testing commit 'a8785bf9'... (3 remaining) Good              \n</br>[*] Testing commit 'addab4c8'... (2 remaining) Bad               \n</br>[*] Verifying...\n</br>[*] Testing commit 'addab4c8'... Bad               \n</br>[*] Testing commit 'a8785bf9'... Good              \n</br> +  First bad commit: addab4c8aa74a18c566079d10b05118acc782a6a (see FIRSTBAD)\n</br> +  {Last-good, First-bad} ASAN log: {good, bad}.bis\n</br> +  All done!\n",
+                    "start_at": "2020-12-22 10:00:26",
+                    "finished_at": "2020-12-22 10:00:22"
+                }
+            ],
+            "meta": {
+                "total_count": 1
+            }
+        }
+
+
+
+### Create a New Job [POST]
+
++ Request (multipart/form-data;boundary=------FormBoundaryShouldDifferAtRuntime)
+
+    + Body
+
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="bin_finder[name]"
+
+            test4
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="bin_finder[good_commit]"
+
+            v1
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="bin_finder[bad_commit]"
+
+            v3
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="bin_finder[poc]"; filename="Heap-buffer-overflow.log"
+            Content-Type: text/x-log
+
+            [message-part-body; type: "text/x-log", size: 2596 bytes]
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="bin_finder[git_repo]"; filename="libtiff.zip"
+            Content-Type: application/zip
+
+            [message-part-body; type: "application/zip", size: 17021437 bytes]
+            ------FormBoundaryShouldDifferAtRuntime
+            Content-Disposition: form-data; name="bin_finder[command]"
+
+            ./tools/tiffset
+            ------FormBoundaryShouldDifferAtRuntime--
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "id": 1,
+                "name": "test4",
+                "status": "pending",
+                "good_commit": "v1",
+                "bad_commit": "v3",
+                "poc": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ2dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--790ea422a9874d20c764b262f7cf5a78f27a3d9c/Heap-buffer-overflow.log",
+                "git_repo": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ2NCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--daa10912d3dc4a42acaa23d808840fe0479dced3/libtiff.zip",
+                "command": "./tools/tiffset",
+                "params": null,
+                "result": null,
+                "log": null,
+                "start_at": null,
+                "finished_at": null
+            }
